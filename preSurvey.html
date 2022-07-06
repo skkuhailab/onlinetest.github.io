@@ -9,25 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Online Exam Proctoring</title>
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
-    <script>
-      function SubForm (){
-          $.ajax({
-              url:'https://api.apispreadsheets.com/data/ekpNhjmXmH2VtOQi/',
-              type:'post',
-              data:$("#myForm").serializeArray(),
-              success: function(){
-                alert("Form Data Submitted :)")
-              },
-              error: function(){
-                alert("There was an error :(")
-              }
-          });
-       }
-    </script>
     <link rel="icon" type="image/x-icon" href="images/skku_logo.png">
     <style>
         .mainbox{
@@ -51,43 +32,41 @@
           <h1 class="display-4">Pre-questionnaire</h1>
           <p class="lead">Please answer the questions below before starting the exam.</p>
 <br>
-          <form>
+          <form action="https://sheetdb.io/api/v1/9zyl7ld3od6ho" method="post" id="sheetdb-form">
             <div class="form-group">
               <label for="name">Name Surname</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="">
+              <input type="text" class="form-control" id="name" name="data[name]" placeholder="">
             </div>
             <div class="form-group">
               <label for="study">The name of the program of the study</label>
-              <input type="text" class="form-control" id="study" name="study" placeholder="">
+              <input type="text" class="form-control" id="study" name="data[study]" placeholder="">
             </div>
 
            
             <div class="form-group"> <!-- Date input -->
                 <label class="control-label" for="date">Birth date</label>
-                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                <input class="form-control" id="date" name="data[date]" placeholder="MM/DD/YYY" type="text"/>
               </div>
             <div class="form-group">
                 <label for="gender">Gender</label>
                 <div class="radio">
-                  <label><input type="radio" name="gender" id="gender"> Female</label>
+                  <label><input type="radio" name="data[gender]" id="gender" value="Female"> Female</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="gender" id="gender"> Male</label>
+                    <label><input type="radio" name="data[gender]" id="gender" value="Male"> Male</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="gender" id="gender"> Prefer not to answer</label>
+                    <label><input type="radio" name="data[gender]" id="gender" value="NA"> Prefer not to answer</label>
                   </div>
+                  
+
+                 
               </div>
 
-
-            <button type="submit" onclick="SubForm()" class="btn btn-primary float-right">Start Exam</button>
+            <button onclick="" class="btn btn-primary float-right">Start Exam</button>
           </form>
         </div>
       </div>
-
-
-
-
 
 
     <!-- Optional JavaScript -->
@@ -113,5 +92,37 @@
         })
     })
 </script>
+
+<script>
+  var form = document.getElementById('sheetdb-form');
+  let x = Math.floor((Math.random() * 5) + 1);
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action,{
+      method: "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+      response => response.json()
+    ).then((html) => {
+      if(x== 1){ //test case 1
+        window.open('selfView.html', '_self');
+      }
+      if(x== 2){ //test case 2
+        window.open('index.html', '_self');
+      }
+      if(x== 3){ //test case 3
+        window.open('preSurvey.html', '_self');
+      }
+      if(x== 4){ //test case 4
+        window.open('endPage.html', '_self');
+      }
+      if(x== 5){ //test case 5
+        window.open('preSurvey.html', '_self');
+      }
+      
+    });
+  });
+</script>
+
   </body>
 </html>
