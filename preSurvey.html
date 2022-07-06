@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Online Exam Proctoring</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script>
+      function SubForm (){
+          $.ajax({
+              url:'https://api.apispreadsheets.com/data/ekpNhjmXmH2VtOQi/',
+              type:'post',
+              data:$("#myForm").serializeArray(),
+              success: function(){
+                alert("Form Data Submitted :)")
+              },
+              error: function(){
+                alert("There was an error :(")
+              }
+          });
+       }
+    </script>
     <link rel="icon" type="image/x-icon" href="images/skku_logo.png">
     <style>
         .mainbox{
@@ -35,11 +54,11 @@
           <form>
             <div class="form-group">
               <label for="name">Name Surname</label>
-              <input type="text" class="form-control" id="name" placeholder="">
+              <input type="text" class="form-control" id="name" name="name" placeholder="">
             </div>
             <div class="form-group">
               <label for="study">The name of the program of the study</label>
-              <input type="text" class="form-control" id="study" placeholder="">
+              <input type="text" class="form-control" id="study" name="study" placeholder="">
             </div>
 
            
@@ -50,13 +69,13 @@
             <div class="form-group">
                 <label for="gender">Gender</label>
                 <div class="radio">
-                  <label><input type="radio" name="optradio" id="gender"> Female</label>
+                  <label><input type="radio" name="gender" id="gender"> Female</label>
                 </div>
                 <div class="radio">
-                    <label><input type="radio" name="optradio" id="gender"> Male</label>
+                    <label><input type="radio" name="gender" id="gender"> Male</label>
                   </div>
                   <div class="radio">
-                    <label><input type="radio" name="optradio" id="gender"> Prefer not to answer</label>
+                    <label><input type="radio" name="gender" id="gender"> Prefer not to answer</label>
                   </div>
               </div>
 
