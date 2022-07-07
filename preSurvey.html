@@ -41,7 +41,7 @@
               <label for="study">The name of the program of the study</label>
               <input type="text" class="form-control" id="study" name="data[study]" placeholder="">
             </div>
-
+ 
            
             <div class="form-group"> <!-- Date input -->
                 <label class="control-label" for="date">Birth date</label>
@@ -59,7 +59,7 @@
                     <label><input type="radio" name="data[gender]" id="gender" value="NA"> Prefer not to answer</label>
                   </div>
                   
-
+              
                  
               </div>
 
@@ -101,10 +101,12 @@
     fetch(form.action,{
       method: "POST",
       body: new FormData(document.getElementById("sheetdb-form")),
+      
     }).then(
       response => response.json()
     ).then((html) => {
       if(x== 1){ //test case 1
+       
         window.open('selfView.html', '_self');
       }
       if(x== 2){ //test case 2
