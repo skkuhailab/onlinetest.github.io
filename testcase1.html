@@ -33,6 +33,10 @@
   height:633px;
   overflow-y: scroll;
 }
+.container{
+    text-align: center;
+}
+
     </style>
   </head>
   <body>
@@ -41,9 +45,16 @@
         <div class="float-child">
           <div class="green">
               <br><br><br>
-            <video id = "webCam" autoplay playsinlne width="700" height="400"></video>
-            <canvas id="canvas"></canvas>
-            <a class="btn btn-primary btn-md custom" href="endPage.html" role="button">Exit Room</a>
+              <video id = "webCam" autoplay playsinlne width="700" height="400"></video>
+            <br><br>
+           <div class="container">
+            <a class="btn btn-primary btn-md custom buttoncenter" href="endPage.html" role="button">Start Proctoring</a>
+            <a class="btn btn-primary btn-md custom buttoncenter" href="endPage.html" role="button">Exit Exam</a>
+           </div>
+                   
+
+      
+           
           </div>
         </div>
         
@@ -56,6 +67,7 @@
       </div>
     
 
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script>
@@ -64,6 +76,8 @@
         const webcam = new Webcam(webCamElement, "user", canvasElement);
         webcam.start();
     </script>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
