@@ -36,6 +36,10 @@
 .container{
     text-align: center;
 }
+.buttontext{
+    color: white;
+    
+}
 
     </style>
   </head>
@@ -45,11 +49,11 @@
         <div class="float-child">
           <div class="green">
               <br><br><br>
-              <video id = "webCam" autoplay playsinlne width="700" height="400"></video>
+              <video id = "webCam"  width="700" height="400"></video> <!--autoplay playsinlne-->
             <br><br>
            <div class="container">
-            <a class="btn btn-primary btn-md custom buttoncenter" href="endPage.html" role="button">Start Proctoring</a>
-            <a class="btn btn-primary btn-md custom buttoncenter" href="endPage.html" role="button">Exit Exam</a>
+            <a class="btn btn-primary btn-md custom buttontext" href="#" role="button" onclick="openWebcam()">Start Proctoring</a>
+            <a class="btn btn-primary btn-md custom" href="endPage.html" role="button">Exit Exam</a>
            </div>
                    
 
@@ -74,7 +78,13 @@
         const webCamElement= document.getElementById("webCam");
         const canvasElement = document.getElementById("canvas");
         const webcam = new Webcam(webCamElement, "user", canvasElement);
-        webcam.start();
+       
+    </script>
+
+    <script>   
+        function openWebcam() {   
+            webcam.start(); 
+        }   
     </script>
 
 
