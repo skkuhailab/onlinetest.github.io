@@ -1,6 +1,5 @@
 <!--
-  COMPLETED
-    Exam Page with proctoring and be told not be observed
+    Exam Page with proctoring
 -->
 
 <!doctype html>
@@ -13,7 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Self View Online Exam</title>
+    <title>Online Exam Proctoring</title>
     <link rel="icon" type="image/x-icon" href="images/skku_logo.png">
     <script type= "text/javascript" src="https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"></script>
     <style>
@@ -45,7 +44,7 @@
         <div class="float-child">
           <div class="green">
               <br><br><br>
-              <video autoplay="true" id="videoElement"  width="700" height="400"></video>
+              <video autoplay muted id="videoElement" src="images/proctor.mp4" width="700" height="400"></video>
             <br><br>
            <div class="container">
             <a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a>
@@ -53,32 +52,13 @@
           </div>
         </div>
         
-        <div id="testDiv" class="float-child" style="pointer-events:none;">
+        <div id="testDiv" class="float-child">
         <iframe src="https://msu.co1.qualtrics.com/jfe/form/SV_2boErK2jprz5Eh0" height="600px" width="700px" style="border:0"></iframe>
         </div>
       </div>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script type="text/javascript">
-        var video = document.querySelector("#videoElement");
-        navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
-  
-        if(navigator.getUserMedia) {
-          navigator.getUserMedia({video:true}, handleVideo, videoError);
-        }
-  
-        function handleVideo(stream) { //if the user accept camera access
-          video.srcObject=stream;
-          video.play();
-          document.getElementById("testDiv").style['pointer-events'] = 'auto';
-        }
-  
-        function videoError(e) { // if camera access denied
-          window.location.replace("./failPage.html");
-            
-        }
-      </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
