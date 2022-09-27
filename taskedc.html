@@ -55,7 +55,7 @@
           <div class="green">
               <br><br><br>
               <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
-              <video muted id="videoElement" src="videos/video3.mp4"  width="90%"></video>  
+              <!-- <video autoplay muted id="videoElement" src="videos/video3.mp4"  width="90%"></video> --> 
             <br><br>
            <div class="container">
              <!-- <a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a> -->
@@ -71,12 +71,14 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
-        var video = document.querySelector("#videoElement");
-        video.addEventListener("'ended',myHandler,false");
-          function myHandler(e) { 
-            console.log('ended'); 
-            setTimeout(function(){ video.play(); }, 3000); 
-          }
+        
+        let demo = document.getElementById('videoElement');
+        setTimeout(function () {
+        console.log("ss")
+        demo.innerHTML = <video autoplay muted id="videoElement" src="videos/video3.mp4"  width="90%"></video> ;
+        }, 5000);
+
+
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
         if(navigator.getUserMedia) {
