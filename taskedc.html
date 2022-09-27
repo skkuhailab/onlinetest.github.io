@@ -56,9 +56,13 @@
               <br><br><br>
               <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
               <!--<video autoplay muted id="videoElement" src="videos/video3.mp4"  width="90%"></video> -->
+              
               <div id="videoElement">
+                <video autoplay muted controls  id="sp" width="90%" style="display: none">
+            
+                </video>
+            </div>
 
-              </div>
             <br><br>
            <div class="container">
              <!-- <a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a> -->
@@ -74,13 +78,11 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
-
-        let dmeo = document.getElementById('videoElement');
+      let sp = document.getElementById('sp');
         setTimeout(function () {
-        console.log("ss")
-        demo.innerHTML = '<video autoplay muted controls  id=\"videoElement\" src=\"videos/video3.mp4\" height=\"500px\" width=\"90%\"></video>';
-        }, 5000);
-
+        sp.style.display = "block"
+        sp.src = "file/demo.mp4"
+      }, 3000);
 
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
