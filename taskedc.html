@@ -58,7 +58,7 @@
               <!--<video autoplay muted id="videoElement" src="videos/video3.mp4"  width="90%"></video> -->
               
               <div id="videoElement">
-                <video autoplay muted controls  id="sp" width="90%" style="display: none"></video>
+                <video autoplay muted id="sp" width="90%" style="display: none"></video>
               </div>
 
             <br><br>
@@ -78,7 +78,7 @@
     <script type="text/javascript">
       let sp = document.getElementById('sp');
       setTimeout(function () {
-       
+        sp.style.display = "block"
         sp.src = "videos/video3.mp4"
       }, 3000);
 
