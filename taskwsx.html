@@ -70,6 +70,10 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
         var video = document.querySelector("#videoElement");
+        //let sp = document.getElementById('sp');
+      setTimeout(function () {
+        video.style.display = "block"
+      }, 3000);
       
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
