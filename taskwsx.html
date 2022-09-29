@@ -53,7 +53,7 @@
         <div class="float-child">
           <div class="green">
               <br><br><br>
-              <video autoplay="true" id="videoElement" width="700" height="450"></video>
+              <video autoplay="true" id="sp" width="700" height="450"></video>
             <br><br>
            <div class="container">
            <!-- <a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a> -->
@@ -69,11 +69,12 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
-        let video = document.querySelector("#videoElement");
-        //let video = document.getElementById('videoElement');
+        //var video = document.querySelector("#videoElement");
+        let sp = document.getElementById('sp');
         setTimeout(function () {
-        video.style.display = "block"
-        }, 3000);
+          sp.style.display = "block"
+          sp.src = "https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"
+          }, 3000);
 
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
