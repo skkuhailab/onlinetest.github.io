@@ -14,7 +14,7 @@
 
     <title>Online Exam Proctoring</title>
     <link rel="icon" type="image/x-icon" href="images/skku_logo.png">
-    <script type= "text/javascript" ></script>
+    <script type= "text/javascript" src = "https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"></script>
     <style>
         .float-container {
             border: 3px solid #fff;
@@ -71,12 +71,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
         var video = document.querySelector("#videoElement");
-
-        let video = document.getElementById("videoElement");
-        setTimeout( function () {
-        video.src = "https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"
-        }, 3000);
-
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
         if(navigator.getUserMedia) {
@@ -93,10 +87,6 @@
           window.location.replace("./failPageqaz.html");
             
         }
-      </script>
-
-      <script>
-        
       </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
