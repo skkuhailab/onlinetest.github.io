@@ -54,7 +54,7 @@
         <div class="float-child">
           <div class="green">
               <br><br><br>
-              <video preload="auto" id="videoElement" width="90%"></video>
+              <video autoplay="true" id="videoElement" width="90%"></video>
             <br><br>
            <div class="container">
              <!--<a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a> -->
@@ -71,10 +71,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
         var video = document.querySelector("#videoElement");
-        setTimeout(function() {
-        video.play();
-        }, 5000);
-
+      
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
         if(navigator.getUserMedia) {
@@ -82,9 +79,12 @@
         }
   
         function handleVideo(stream) { //if the user accept camera access
+          setTimeout(function () {
           video.srcObject=stream;
           video.play();
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
+        }, 3000);
+          
         }
   
         function videoError(e) { // if camera access denied
