@@ -71,6 +71,11 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
         var video = document.querySelector("#videoElement");
+        video.addEventListener("canplay", function() {
+        setTimeout(function() {
+        video.play();
+        }, 5000);
+        });
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
         if(navigator.getUserMedia) {
