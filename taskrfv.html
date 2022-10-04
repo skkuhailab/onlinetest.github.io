@@ -75,10 +75,10 @@
 
     <script type="text/javascript">
         var video = document.querySelector("#videoElement");
-        setTimeout(function () {
-        video.style.display = "block"
-        video.src = "videos/video3.mp4"
-        }, 3000);
+        //setTimeout(function () {
+        //video.style.display = "block"
+        //video.src = "videos/video3.mp4"
+        //}, 3000);
 
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
@@ -86,9 +86,7 @@
           navigator.getUserMedia({video:true}, handleVideo, videoError);
         }
   
-        function handleVideo(stream) { //if the user accept camera access
-          document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
-        }
+    
 
             
         
