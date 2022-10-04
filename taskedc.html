@@ -55,11 +55,7 @@
           <div class="green">
               <br><br><br>
               <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
-              <!--<video autoplay muted id="videoElement" src="videos/video3.mp4"  width="90%"></video> -->
-              
-              <div id="videoElement">
-                <video autoplay muted id="sp" width="90%" style="display: none"></video>
-              </div>
+              <video autoplay muted id="videoElement" src="videos/video3.mp4"  width="90%"></video>
 
             <br><br>
            <div class="container">
@@ -76,11 +72,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
-      let sp = document.getElementById('sp');
-      setTimeout(function () {
-        sp.style.display = "block"
-        sp.src = "videos/video3.mp4"
-      }, 3000);
+        var video = document.querySelector("#videoElement");
 
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
