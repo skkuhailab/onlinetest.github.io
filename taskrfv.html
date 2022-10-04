@@ -64,7 +64,7 @@
           <br><br><br>
               <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
             
-              <video autoplay muted id="videoElement" src = "videos/video3.mp4"  width="90%"></video>
+              <video autoplay muted id="videoElement" width="90%"></video>
              
             <br><br>
 
@@ -84,7 +84,7 @@
     <script>
     let video = document.getElementById("videoElement");
     setTimeout( function () {
-      video.play();
+      video.src = "videos/video3.mp4"
     }, 3000);
     </script>
 
