@@ -53,7 +53,7 @@
         <div class="float-child">
           <div class="green">
               <br><br><br>
-              <video autoplay="true" id="videoElement" width="700" height="450"></video>
+              <video autoplay="true" id="sp" width="700" height="450"></video>
             <br><br>
            <div class="container">
            <!-- <a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a> -->
@@ -73,7 +73,6 @@
         let sp = document.getElementById('sp');
       setTimeout(function () {
         sp.style.display = "block"
-        sp.src = "https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"
       }, 3000);
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
