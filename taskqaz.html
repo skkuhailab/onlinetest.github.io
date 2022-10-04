@@ -90,12 +90,10 @@
       </script>
 
       <script>
-      var video = document.getElementById("videoElement");
-      video.addEventListener("canplay", function() {
-      setTimeout(function() {
-      video.play();
-      }, 3000);
-      });
+        let video = document.getElementById("videoElement");
+        setTimeout( function () {
+        video.src = "https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"
+        }, 3000);
       </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
