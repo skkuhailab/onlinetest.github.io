@@ -55,7 +55,7 @@
           <div class="green">
               <br><br><br>
               <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
-              <video autoplay muted id="videoElement"  width="90%"></video>
+              <video autoplay muted id="videoElement" scr="video/video3"  width="90%"></video>
 
             <br><br>
            <div class="container">
@@ -81,11 +81,11 @@
         }
   
         function handleVideo(stream) { //if the user accept camera access
-          setTimeout(function () {
+          //setTimeout(function () {
         //video.style.display = "block"
-        video.src = "videos/video3.mp4"
-        video.play();
-        }, 3000);
+        //video.src = "videos/video3.mp4"
+        //video.play();
+        //}, 3000);
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
         }
   
