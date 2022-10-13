@@ -84,9 +84,9 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
         var video = document.querySelector("#videoElement");
-        setTimeout( function () {
-        video.src = "videos/video3.mp4"
-        }, 5000);
+        //setTimeout( function () {
+        //video.src = "videos/video3.mp4"
+        //}, 5000);
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
         if(navigator.getUserMedia) {
@@ -94,7 +94,11 @@
         }
   
         function handleVideo(stream) { //if the user accept camera access
+          setTimeout(function () {
+          video.src= "videos/video3.mp4";
+          video.play();
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
+        }, 5000);
         }
   
         function videoError(e) { // if camera access denied
