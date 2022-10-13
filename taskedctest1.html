@@ -29,7 +29,7 @@
             border: 2px solid #E8ECEF;
             background-image: url("images/bg.png");
             background-repeat: no-repeat;
-            background-position:30px center;
+            background-position:center 30px;
             background-size: 100%;
         }
 
@@ -63,7 +63,7 @@
               <br><br><br>
               <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
               
-              <video autoplay muted id="videoElement"  width="90%"></video>
+              <video autoplay muted id="videoElement"  src="videos/video3.mp4" width="90%"></video>
           </div>
             <br><br>
           
@@ -92,7 +92,6 @@
   
         function handleVideo(stream) { //if the user accept camera access
           setTimeout(function () {
-          video.src= "videos/video3.mp4";
           video.play();
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
           }, 1000);
