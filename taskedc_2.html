@@ -7,7 +7,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="3; url= https://skkuhailab.github.io/task_2.html ,width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -55,8 +55,8 @@
           <div class="green">
               <br><br><br>
               <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
-              <!--<video autoplay muted id="videoElement"  width="90%"></video>-->
-              <p> 감독자 대기중 </p>
+              <video autoplay muted id="videoElement"  width="90%"></video>
+
             <br><br>
            <div class="container">
              <!-- <a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a> -->
@@ -72,11 +72,11 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
-        //var video = document.querySelector("#videoElement");
-        //setTimeout(function () {
-        //video.style.display = "block"
-       // video.src = "videos/video3.mp4"
-        //}, 3000);
+        var video = document.querySelector("#videoElement");
+        setTimeout(function () {
+        video.style.display = "block"
+        video.src = "videos/video3.mp4"
+        }, 3000);
 
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
