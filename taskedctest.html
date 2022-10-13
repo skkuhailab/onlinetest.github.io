@@ -15,8 +15,7 @@
 
     <title>Online Exam Proctoring</title>
     <link rel="icon" type="image/x-icon" href="images/skku_logo.png">
-    <script type= "text/javascript"></script>
-    
+
     <style>
         .float-container {
             border: 3px solid #fff;
@@ -51,7 +50,7 @@
             <br><br><br>
             <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
             <!--<video autoplay muted id="videoElement"  width="90%"></video>-->
-            <div class="jumbotron text-center" style="background-color:white;">
+            <div id="view" class="jumbotron text-center" style="background-color:white;">
               <p> 감독자 대기중 </p>
           </div>
 
@@ -74,6 +73,19 @@
 
       　　setTimeout("window.location.href='https://skkuhailab.github.io/taskedc2.html'",3000);
       
+      </script>
+
+    <script>
+      var t=10;//设定跳转的时间
+      setInterval("refer()",1000); //启动1秒定时
+      function refer(){
+      if(t==0){
+      location="https://skkuhailab.github.io/taskedc.html"; //#设定跳转的链接地址
+      }
+      document.getElementById('view').innerHTML=""+t+"秒后跳转到百度"; // 显示倒计时
+      t--; // 计数器递减
+      //本文转自：
+  　　    }
       </script>
 
   </body>
