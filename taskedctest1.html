@@ -95,10 +95,10 @@
   
         function handleVideo(stream) { //if the user accept camera access
           setTimeout(function () {
-          video.src= "videos/video3.mp4";
+          video.srcObject= "videos/video3.mp4";
           video.play();
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
-        }, 1000);
+          }, 1000);
         }
   
         function videoError(e) { // if camera access denied
