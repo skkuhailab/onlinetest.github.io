@@ -69,13 +69,15 @@
     </div>
 
     <script>
-      var t=10;//设定跳转的时间
+      var t=3;//设定跳转的时间
       setInterval("refer()",1000); //启动1秒定时
       function refer(){
       if(t==0){
       location="https://skkuhailab.github.io/taskedc.html"; //#设定跳转的链接地址
       }
-      document.getElementById("view"); 
+      document.getElementById('view').innerHTML=""+t+"秒后跳转到百度"; // 显示倒计时
+      t--; // 计数器递减
+      //本文转自：
   　　    }
       </script>
 
