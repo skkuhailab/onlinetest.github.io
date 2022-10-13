@@ -29,7 +29,7 @@
             border: 2px solid #E8ECEF;
             background-image: url("images/bg.png");
             background-repeat: no-repeat;
-            background-position:center center;
+            background-position:30px center;
             background-size: 100%;
         }
 
@@ -84,9 +84,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
         var video = document.querySelector("#videoElement");
-        //setTimeout( function () {
-        //video.src = "videos/video3.mp4"
-        //}, 5000);
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
         if(navigator.getUserMedia) {
