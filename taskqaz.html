@@ -79,13 +79,10 @@
         }
   
         function handleVideo(stream) { //if the user accept camera access
-          setTimeout(function () {
-          video.srcObject=stream;
-          video.play();
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
-        }, 3000);
-          
         }
+          
+        
   
         function videoError(e) { // if camera access denied
           window.location.replace("./failPageqaz.html");
@@ -94,7 +91,7 @@
 
       <script>
         var video = document.querySelector("#videoElement");
-        
+
         setTimeout(function () {
           video.srcObject=stream; 
         },3000);
