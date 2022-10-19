@@ -87,9 +87,11 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
     <script>
-    var video = document.getElementById("videoElement");
+    var video = document.getElementById("#videoElement");
     navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
 
+    document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
+    
     setTimeout( function () {
       video.src = "videos/video3.mp4";
       video.play();
