@@ -78,13 +78,13 @@
           navigator.getUserMedia({video:true}, handleVideo, videoError);
         }
   
-        setTimeout(
+        
         function handleVideo(stream) { //if the user accept camera access
           video.srcObject=stream;
           video.play();
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
           
-        }, 3000)
+        }
   
         function videoError(e) { // if camera access denied
           window.location.replace("./failPageqaz.html");
