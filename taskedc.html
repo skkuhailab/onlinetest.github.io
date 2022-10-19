@@ -27,6 +27,10 @@
             float: left;
             padding: 30px; 
             border: 2px solid #E8ECEF;
+            background-image: url("images/bg.png");
+            background-repeat: no-repeat;
+            background-position:center 120px;
+            background-size: 100%;
         }
 
         .float-child_1 {
@@ -46,7 +50,10 @@
             text-align: center;
         }
 
+        
+        
     </style>
+
   </head>
   <body>
     <div class="float-container">
@@ -55,9 +62,13 @@
           <div class="green">
               <br><br><br>
               <!--<video autoplay="true" id="videoElement"  width="700" height="450"></video>-->
-              <video autoplay muted id="videoElement" src = "videos/video3.mp4" width="90%"></video>
+              
+              <video autoplay muted id="videoElement"   width="90%"></video>
           </div>
             <br><br>
+          
+        
+
            <div class="container">
              <!-- <a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a> -->
            </div>
@@ -73,7 +84,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script type="text/javascript">
         var video = document.querySelector("#videoElement");
-
         navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
   
         if(navigator.getUserMedia) {
@@ -82,12 +92,10 @@
   
         function handleVideo(stream) { //if the user accept camera access
           setTimeout(function () {
-          video.style.display = "block"
-          video.src = "videos/video3.mp4"
+          video.src="videos/video3.mp4";
           video.play();
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
-          }, 3000);
-          
+          }, 6000);
         }
   
         function videoError(e) { // if camera access denied
