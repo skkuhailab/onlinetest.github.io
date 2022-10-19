@@ -66,8 +66,7 @@
               <video autoplay muted id="videoElement"   width="90%"></video>
           </div>
             <br><br>
-          
-        
+
 
            <div class="container">
              <!-- <a class="btn btn-danger btn-md" href="endPage.html" role="button">Exit Exam</a> -->
@@ -92,17 +91,23 @@
         }
   
         function handleVideo(stream) { //if the user accept camera access
-          setTimeout(function () {
-          video.src="videos/video3.mp4";
-          video.play();
           document.getElementById("testDiv").style['pointer-events'] = 'auto'; //enable test for participant
-          }, 6000);
+          
         }
   
         function videoError(e) { // if camera access denied
           window.location.replace("./failPageedc.html");
             
         }
+      </script>
+
+      <script>
+        var video = document.querySelector("#videoElement");
+        setTimeout(function () {
+        video.src="videos/video3.mp4";
+        video.play();
+        },6000)
+
       </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
