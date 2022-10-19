@@ -88,9 +88,13 @@
     
     <script>
     var video = document.getElementById("videoElement");
+    navigator.getUserMedia = navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia||navigator.msGetUserMedia||navigator.oGetUserMedia;
+
     setTimeout( function () {
-      video.src = "videos/video3.mp4"
+      video.src = "videos/video3.mp4";
+      video.play();
     }, 6000)
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
